@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "id": "f5e8",
+      "fullName": "test",
+      "email": "liltenner16@gmail.com",
+      "password": "111"
+    },
+    {
+      "id": "5f1f",
+      "fullName": "test",
+      "email": "test@gmail.com",
+      "password": "555"
+    },
+    {
+      "id": "39d9",
+      "fullName": "tolex",
+      "email": "tolex@gmail.com",
+      "password": "222"
+    },
+    {
+      "id": "da6d",
+      "fullName": "prof",
+      "email": "prof@gmail.com",
+      "password": "111"
+    }
+  ]
+}

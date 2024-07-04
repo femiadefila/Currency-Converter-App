@@ -1,0 +1,89 @@
+.container {
+    max-width: 400px;
+    margin: auto;
+    margin-bottom: 0px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h4 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #094b8d;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-control {
+    height: 38px;
+    padding: 6px 12px;
+    font-size: 14px;
+    border-radius: 4px;
+  }
+  
+  .btn-primary {
+    width: 100%;
+    background-color: #000000;
+    border: none;
+    padding: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #094b8d;
+    transform: scale(1.05);
+  }
+  
+  .mt-4 h6 {
+    text-align: center;
+    color: #28a745;
+  }
+  
+  .log-out {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .log-out button {
+    background-color: #dc3545;
+    border: none;
+    padding: 7px 10px;
+    font-size: 13px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-bottom: 40px;
+  }
+  
+  .log-out button:hover {
+    background-color: #000000;
+    transform: scale(1.05);
+  }
+  
+  .log-out button:active {
+    transform: scale(0.95);
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .log-out {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  

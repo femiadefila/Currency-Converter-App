@@ -1,0 +1,14 @@
+.navbar-brand{
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(119, 149, 232);
+}
+
+.navbar-brand:hover{
+    color:rgb(128, 41, 179)
+}
+
+.navbar-brand span{
+    color: rgb(223, 153, 23);
+}

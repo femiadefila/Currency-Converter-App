@@ -1,0 +1,50 @@
+<div class="container-fluid">
+    <div class="wrapper">
+      <form action="" [formGroup]="registerForm" (ngSubmit)="submitDetails()">
+        <h1>Register</h1>
+        <div class="input-box">
+            <input type="text" placeholder="type your name" formControlName="fullName" />
+            <small *ngIf="fullName.invalid && (fullName.dirty || fullName.touched)">
+              <div *ngIf="fullName.errors?.['required']">fullname is required</div>
+              <div *ngIf="fullName.errors?.['pattern']">Enter a valid</div>
+            </small>
+          </div>
+        <div class="input-box">
+          <input type="text" placeholder="email" formControlName="email" />
+          <small *ngIf="email.invalid && (email.dirty || email.touched)">
+            <div *ngIf="email.errors?.['required']">Email is required</div>
+            <div *ngIf="email.errors?.['email']">Email should be valid</div>
+          </small>
+        </div>
+        <div class="input-box">
+          <input
+            type="password"
+            placeholder="password"
+            formControlName="password"/>
+          <small *ngIf="password.invalid && (password.dirty || password.touched)">
+            <div *ngIf="password.errors?.['required']">Password is required</div>
+          </small>
+        </div>
+
+        <div class="input-box">
+            <input type="text" placeholder="confirm password" formControlName="confirmPassword" />
+            <small *ngIf="confirmPassword.invalid && (confirmPassword.dirty || confirmPassword.touched)">
+              <div *ngIf="confirmPassword.errors?.['required']">confirm the password</div>
+            </small>
+            <small *ngIf="registerForm.errors?.['passwordMismatch'] && confirmPassword.valid && password.valid">password should match</small>
+          </div>
+  
+        <button
+          type="submit"
+          routerLink="/employee-dashboard"
+          class="btn"  [disabled]="registerForm.invalid">
+          Register
+        </button>
+  
+        <div class="register-link">
+          <p>Already have an accoount? <a routerLink="/login">Login</a></p>
+        </div>
+      </form>
+    </div>
+  </div>
+  

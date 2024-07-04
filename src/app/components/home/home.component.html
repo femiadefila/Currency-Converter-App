@@ -1,0 +1,36 @@
+<app-navbar></app-navbar>
+<div>
+  <div class="container mt-5">
+    <h4>Prof's Currency Converter</h4>
+    <form [formGroup]="converterForm" (ngSubmit)="convert()">
+      <div class="form-group">
+        <label for="fromCurrency">From:</label>
+        <select formControlName="fromCurrency" class="form-control" id="fromCurrency">
+          <option *ngFor="let currency of exchangeRates | keyvalue" [value]="currency.key">
+            {{ currency.key }}
+          </option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="toCurrency">To:</label>
+        <select formControlName="toCurrency" class="form-control" id="toCurrency">
+          <option *ngFor="let currency of exchangeRates | keyvalue" [value]="currency.key">
+            {{ currency.key }}
+          </option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="amount">Amount:</label>
+        <input type="number" formControlName="amount" class="form-control" id="amount">
+      </div>
+      <button type="submit" class="btn btn-primary mt-3">Convert</button>
+    </form>
+    <div *ngIf="result !== null" class="mt-4">
+      <h6>Converted Amount: {{ result }}</h6>
+    </div>
+  </div>
+
+  <div class="log-out">
+    <button (click)="logOut()">Log Out</button>
+  </div>
+</div>
